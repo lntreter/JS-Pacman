@@ -1,0 +1,70 @@
+<style>
+    body {
+        margin: 0;
+        background-color: black;
+        padding: 20px;
+        height: 100vh;
+    }
+
+    #scoreText {
+        color: white;
+        font-family: sans-serif;
+        font-size: 30px;
+        margin-right: 6px;
+    }
+
+    #scoreEl {
+        color: white;
+        font-family: sans-serif;
+        font-size: 30px;
+    }
+    #hak {
+        color: white;
+        font-family: sans-serif;
+        font-size: 30px;
+        margin-right: 6px;
+    }
+
+    #hakEl {
+        color: white;
+        font-family: sans-serif;
+        font-size: 30px;
+    }
+    #canvasContainer {
+        width: 800px; /* Yeni genişlik değeri */
+        height: 850px; /* Yeni yükseklik değeri */
+        overflow: hidden; /* İçeriği kesmek için gizli taşma kullanın */
+        position: relative;
+        margin: auto;
+    }
+
+    #scoreContainer {
+        display: flex; /* İçerikleri yatay olarak hizalayacak bir flex konteyner yapısı kullanıyoruz */
+        align-items: center; /* İçerikleri dikey olarak hizalıyoruz */
+    }
+
+    #scoreContainer p {
+        margin: 0; /* Paragrafların varsayılan boşluklarını kaldırıyoruz */
+        padding-right: 10px; /* Paragraflar arasında boşluk ekliyoruz */
+    }
+
+</style>
+
+<div id="scoreContainer">
+    <p id="scoreText">Puan:</p>
+    <p id="scoreEl">0</p>
+    <p id="hak">Kalan Can:</p>
+    <p id="hakEl">3</p>
+</div>
+
+<audio id="sesler" src="./imgs/menu.mp3"></audio>
+
+<button id="restartButton" style="display: none;">Devam Et</button>
+<button id="startButton" style="display: none;">OYNA</button>
+<button id="winButton" style="display: none;">Yeniden Oyna</button>
+<button id="level2" style="display: none;">Level 2</button>
+<div id="canvasContainer" width="400" height="300">
+    <canvas id="canvas" width="800" height="850" ></canvas>
+</div>
+
+<script src="index.js"></script>    
